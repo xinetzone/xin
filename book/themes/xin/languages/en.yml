@@ -1,6 +1,8 @@
 categories: Categories
+category: Category
 search: Search
 tags: Tags
+tag: Tag
 tagcloud: Tag Cloud
 tweets: Tweets
 prev: Prev
@@ -15,5 +17,3 @@ older: Older
 share: Share
 powered_by: Powered by
 rss_feed: RSS Feed
-category: Category
-tag: Tag
