@@ -6,7 +6,6 @@
 title: 道法自然
 subtitle: 主宰自我
 description: "利用 AI 开发一切有意思的东西"
-keywords: blog, AI, DeepLearning
 author: xinetzone
 language:
   - zh-CN
@@ -14,13 +13,14 @@ language:
 timezone: "Asia/Shanghai"
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+## Set your site url here. For example, if you use GitHub Page,
+## set url as 'https://username.github.io/project'
 url: https://xinetzone.github.io/xin
 permalink: /:year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -104,6 +104,18 @@ theme: xin
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
+  type: "git"
   repo: git@github.com:xinetzone/xin.git
   branch: gh-pages
+
+# 添加 RSS 订阅支持
+## https://github.com/hexojs/hexo-generator-feed
+## npm install hexo-generator-feed
+feed:
+  # Generate both atom and rss2 feeds
+  type:
+    - rss2
+    - atom
+  path:
+    - rss2.xml
+    - atom.xml
