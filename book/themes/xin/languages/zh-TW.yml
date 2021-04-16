@@ -1,6 +1,8 @@
 categories: 分類
+category: 分類
 search: 搜尋
 tags: 標籤
+tag: 標籤
 tagcloud: 標籤雲
 tweets: 推文
 prev: 上一頁
@@ -15,5 +17,3 @@ older: Older
 share: Share
 powered_by: Powered by
 rss_feed: RSS Feed
-category: Category
-tag: Tag

@@ -1,23 +1,28 @@
-<head>
-    <meta charset="UTF-8">
-    <%- partial('google-analytics') %>
-    <%
-    var title = page.title;
+<%
+    let title = page.title
+    // archives, category, tag pages title
     if (is_archive()) {
-        title = __('archive_a');
+        title = __('archive_a')
         if (is_month()){
-            title += ': ' + page.year + '/' + page.month;
+            title += ': ' + page.year + '/' + page.month
         } else if (is_year()){
-            title += ': ' + page.year;
-        }} else if (is_category()){
-            title = __('category') + ': ' + page.category;
-        } else if (is_tag()){
-            title = __('tag') + ': ' + page.tag;
+            title += ': ' + page.year
         }
-    %>
-    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    } else if (is_category()){
+        title = __('category') + ': ' + page.category
+    } else if (is_tag()){
+        title = __('tag') + ': ' + page.tag
+    }
+    // final page title.
+    let pageTitle = title ? title + ' | ' + config.title : config.title
+%>
+
+<head>
+    <meta charset="utf-8">
+    <%- partial('google-analytics') %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+    <title><%= pageTitle %></title>
     <% if (config.feed) { %>
         <%- feed_tag() %>
     <% } else if (theme.rss) { %>

@@ -1,6 +1,8 @@
 categories: 分类
+category: 目录
 search: 搜索
 tags: 标签
+tag: 标签
 tagcloud: 标签云
 tweets: 推文
 prev: 上一页
@@ -15,5 +17,3 @@ older: 后一篇
 share: 分享
 powered_by: Powered by
 rss_feed: RSS 订阅
-category: 目录
-tag: 标签
