@@ -1,5 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+lang: zh-CN # default
+tags: {{ tags }}
+categories: {{ categories }}
 ---
